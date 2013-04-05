@@ -49,4 +49,4 @@ COM1003
 </pre>
 
 * Notice in this csv it does not include a header, just write your module, start a new line, write a module, start a new line and so on...
-* See [Format of the CSV](https://github.com/andmar8/Panopto-Java-BlockBooker#format-of-the-csv) in the Block Booker to see what format the result CSV is in
+* See [Format of the CSV](https://github.com/andmar8/Panopto-Java-BlockBooker#format-of-the-csv) in the Block Booker to see what format the resultant CSV is in
