@@ -15,8 +15,10 @@ java -jar ScientiaActivityParser.jar (input modules .csv file) (scientia activit
 For example...
 
 <pre>
-java -jar ScientiaActivityParser.jar modules.csv http://timetableserver.example.com:8080/Scientia/TimetableXMLReportEngine/Default.aspx?LocationsActivitiesAndSchedulesEndpoint&module= http://timetableserver.example.com:8080/Scientia/TimetableXMLReportEngine/Default.aspx?modulesForAStaffIdEndpoint&moduleid= sessionsToSchedule.csv
+java -jar ScientiaActivityParser.jar modules.csv http://timetableserver.example.com:8080/Scientia/TimetableXMLReportEngine/Default.aspx?LocationsActivitiesAndSchedulesEndpoint&module= http://timetableserver.example.com:8080/Scientia/TimetableXMLReportEngine/Default.aspx?modulesForAStaffIdEndpoint&moduleid= sessionsToSchedule.csv Q1213-
 </pre>
+
+NOTE: See the bottom section of (What are external Id's)[https://github.com/andmar8/Panopto-PHP-Booking-Engine#what-are-external-ids] to understand why we sometimes need the ability to prefix our module identifiers in the output
 
 Format of the CSV
 -----------------
