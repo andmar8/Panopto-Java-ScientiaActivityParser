@@ -18,40 +18,31 @@ For example...
 java -jar ScientiaActivityParser.jar modules.csv http://timetableserver.example.com:8080/Scientia/TimetableXMLReportEngine/Default.aspx?LocationsActivitiesAndSchedulesEndpoint&module= http://timetableserver.example.com:8080/Scientia/TimetableXMLReportEngine/Default.aspx?modulesForAStaffIdEndpoint&moduleid= sessionsToSchedule.csv Q1213-
 </pre>
 
-NOTE: See the bottom section of (What are external Id's)[https://github.com/andmar8/Panopto-PHP-Booking-Engine#what-are-external-ids] to understand why we sometimes need the ability to prefix our module identifiers in the output
+NOTE: See the bottom section of [What are external Id's[(https://github.com/andmar8/Panopto-PHP-Booking-Engine#what-are-external-ids) to understand why we sometimes need the ability to prefix our module identifiers in the output
 
 Format of the CSV
 -----------------
 
-To use the block booker you need to specify a CSV file in the following format...
+To use the Activity Parsers you need to specify a CSV file in the following format...
 
 <table>
 <tr>
-	<th>name</th>
-	<th>folderExternalId</th>
-	<th>start</th>
-	<th>end</th>
-	<th>location</th>
-	<th>externalId</th>
+	<th>module id in timetable system to get lecture captured activities for</th>
 </tr>
 <tr>
-	<td>COM1001/L01</td>
-	<td>Q1213-COM1001</td>
-	<td>02/10/2012 13:00</td>
-	<td>02/10/2012 14:00</td>
-	<td>BLDG.1.10</td>
-	<td>#SPLUS123456</td>
+	<td>COM1001</td>
+	<td>COM1002</td>
+	<td>COM1003</td>
 </tr>
 <table>
 
 Or, as it would be in the csv....
 
 <pre>
-"name","folderExternalId","start","end","location","externalId"
-"COM1001/L01","Q1213-COM1001","02/10/2012 13:00","02/10/2012 14:00","BLDG.1.10","#SPLUS123456"
+COM1001
+COM1002
+COM1003
 </pre>
 
-* The name can be anything you like, just make sure to escape double quotes and commas
-* The start and end MUST be in DD/MM/YYYY HH:mm
-* You need to be using external Id's for the folder and location or the block booker will not be able to work out which folder to assign the recording to or which remote recorders to use
-* See the [Booking Engine](https://github.com/andmar8/Panopto-PHP-Booking-Engine) for more about external Id's
+* Notice in this csv it does not include a header, just write your module, start a new line, write a module, start a new line and so on...
+* See [Format of the CSV](https://github.com/andmar8/Panopto-Java-BlockBooker#format-of-the-csv) in the Block Booker to see what format the result CSV is in
