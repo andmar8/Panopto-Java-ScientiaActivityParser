@@ -3,19 +3,21 @@ Panopto-Java-ScientiaActivityParser
 
 Using this tool we automatically create the csv required by Block Booker from activities in our timetabling system, given a little bit of tweaking this could be adapted to any other timetabling system... similarly to the booking engine, if you were to replace the scientia client sections with an interconnect to your timetabling system then the rest of the code will do the heavy lifting of talking to the Panopto server from there.
 
+This code was originally backed by a Lectopia system but was re-written for Panopto.
+
 The code requires the [Panopto-Java-Util](https://github.com/andmar8/Panopto-Java-Util) Library
 
 How to use the jar
 ------------------
 
 <pre>
-java -jar ScientiaActivityParser.jar (input modules .csv file) (scientia activity endpoint) (scientia moduleMembership endpoint) (output .csv file) ([Optional: module prefix to append to output])
+java -jar ScientiaActivityParser.jar (input modules .csv file) (scientia activity endpoint) (output .csv file) ([Optional: module prefix to append to output])
 </pre>
 
 For example...
 
 <pre>
-java -jar ScientiaActivityParser.jar modules.csv http://timetableserver.example.com:8080/Scientia/TimetableXMLReportEngine/Default.aspx?LocationsActivitiesAndSchedulesEndpoint&module= http://timetableserver.example.com:8080/Scientia/TimetableXMLReportEngine/Default.aspx?modulesForAStaffIdEndpoint&moduleid= sessionsToSchedule.csv Q1213-
+java -jar ScientiaActivityParser.jar modules.csv http://timetableserver.example.com:8080/Scientia/TimetableXMLReportEngine/Default.aspx?LocationsActivitiesAndSchedulesEndpoint&module= sessionsToSchedule.csv Q1213-
 </pre>
 
 NOTE: See the bottom section of [What are external Id's](https://github.com/andmar8/Panopto-PHP-Booking-Engine#what-are-external-ids) to understand why we sometimes need the ability to prefix our module identifiers in the output
