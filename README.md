@@ -27,7 +27,7 @@ To use the Activity Parsers you need to specify a CSV file in the following form
 
 <table>
 <tr>
-	<th>module id in timetable system to get lecture captured activities for</th>
+	<th>Module id in the timetable system to get activities, in lecture capture enabled locations, for</th>
 </tr>
 <tr>
 	<td>COM1001</td>
