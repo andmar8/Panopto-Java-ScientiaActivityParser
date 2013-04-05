@@ -31,7 +31,11 @@ To use the Activity Parsers you need to specify a CSV file in the following form
 </tr>
 <tr>
 	<td>COM1001</td>
+</tr>
+<tr>
 	<td>COM1002</td>
+</tr>
+<tr>
 	<td>COM1003</td>
 </tr>
 <table>
